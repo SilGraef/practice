@@ -1,0 +1,26 @@
+// script.js
+
+$(document).ready(function() {
+    $('.answer-option').click(function() {
+        // Disable all answer options
+        $('.answer-option').prop('disabled', true);
+
+        // Get the selected answer
+        var selectedAnswer = $(this).data('answer');
+
+        // Check if the selected answer is correct
+        var correctAnswer = 'Paris';
+        var isCorrect = selectedAnswer === correctAnswer;
+
+        // Update feedback message
+        var feedbackMessage = isCorrect ? 'Correct!' : 'Incorrect. The correct answer is ' + correctAnswer;
+        $('.feedback').text(feedbackMessage);
+
+        // Add class to feedback message based on correctness
+        if (isCorrect) {
+            $('.feedback').addClass('correct');
+        } else {
+            $('.feedback').addClass('incorrect');
+        }
+    });
+});
