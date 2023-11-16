@@ -1,1 +1,12 @@
+---------------------------------------------------------------------------------------------------
 
+function findNeedle(haystack) {
+    const needleIndex = haystack.indexOf("needle");
+    return `found the needle at position ${needleIndex}`;
+}
+
+const haystack1 = ["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"];
+console.log(findNeedle(haystack1)); 
+
+
+---------------------------------------------------------------------------------------------------
